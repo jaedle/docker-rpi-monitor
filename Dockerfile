@@ -2,8 +2,6 @@ FROM resin/rpi-raspbian:latest
 
 LABEL maintainer="Michael Miklis / <info@michaelmiklis.de>"
 
-RUN [ "cross-build-start" ]
-
 ENV  DEBIAN_FRONTEND noninteractive
 
 # Install RPI-Monitor form Xavier Berger's repository
@@ -32,5 +30,3 @@ EXPOSE 8888
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
 CMD bash -C '/run.sh';'bash'
-
-RUN [ "cross-build-end" ]
