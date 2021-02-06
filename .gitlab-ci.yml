@@ -6,4 +6,4 @@ build_and_deploy:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
     - docker image push jaedle/docker-rpi-monitor:latest
   only:
-    - master
+    - main
